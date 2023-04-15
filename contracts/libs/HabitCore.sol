@@ -89,6 +89,16 @@ contract HabitCore is RoleController, HabitCollectionFactory {
         uint256 indexed index
     );
 
+    event HabitSetted(uint256 indexed habitId, HabitInfo indexed habitInfo);
+
+    event Participated(
+        uint256 indexed habitId,
+        address indexed user,
+        uint256 indexed amount
+    );
+
+    event Settled(uint256 indexed habitId);
+
     // Events that occur when the moderator is registered
     event ModeratorRegistered(address indexed moderator);
 

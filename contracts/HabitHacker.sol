@@ -30,6 +30,7 @@ contract HabitHacker is Initializable, HabitCore {
     ) public onlyRelayer {
         habitInfo[habitId] = _habitInfo;
         createCollection(habitId, collectionName, baseURI);
+        emit HabitSetted(habitId, _habitInfo);
     }
 
     /**
@@ -61,6 +62,7 @@ contract HabitHacker is Initializable, HabitCore {
         participants[habitId].push(msg.sender);
         totalBettingAmount[habitId] += msg.value;
         participatedHabitIds[msg.sender].push(habitId);
+        emit Participated(habitId, msg.sender, msg.value);
     }
 
     /**
@@ -200,6 +202,8 @@ contract HabitHacker is Initializable, HabitCore {
                 );
             }
         }
+
+        emit Settled(habitId);
     }
 
     /**
