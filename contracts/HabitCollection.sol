@@ -47,4 +47,6 @@ contract HabitCollection is ERC721Upgradeable, ContractFactory {
     function _baseURI() internal view override returns (string memory) {
         return baseURI;
     }
+
+    uint256[50] private __gap;
 }

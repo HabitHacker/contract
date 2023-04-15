@@ -232,4 +232,6 @@ contract HabitHacker is Initializable, HabitCore {
     }
 
     receive() external payable {}
+
+    uint256[50] private __gap;
 }

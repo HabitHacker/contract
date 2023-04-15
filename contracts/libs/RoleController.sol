@@ -138,5 +138,5 @@ contract RoleController is AccessControlEnumerableUpgradeable {
         return hasRole(ADMIN_ROLE, account);
     }
 
-    uint256[49] private __gap;
+    uint256[48] private __gap;
 }

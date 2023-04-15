@@ -37,4 +37,6 @@ contract HabitCollectionFactory {
                 getSalt(habitId)
             );
     }
+
+    uint256[49] private __gap;
 }
