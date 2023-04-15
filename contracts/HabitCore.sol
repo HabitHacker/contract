@@ -3,8 +3,10 @@ pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts-upgradeable/utils/cryptography/ECDSAUpgradeable.sol";
 import "./RoleController.sol";
+import "./HabitCollectionFactory.sol";
+import "hardhat/console.sol";
 
-contract HabitCore is RoleController {
+contract HabitCore is RoleController, HabitCollectionFactory {
     using ECDSAUpgradeable for bytes32;
 
     // Amount required to register the moderator
@@ -138,6 +140,16 @@ contract HabitCore is RoleController {
      */
     function resisterOtherChainModerator(address addr) public onlyRelayer {
         addModerator(addr);
+    }
+
+    /**
+     * @notice Function to update the template address of the collection to be deployed
+     * @param _habitCollectionTemplate Address of habit collection template
+     */
+    function updateCollectionTemplate(
+        address _habitCollectionTemplate
+    ) public onlyAdmin {
+        habitCollectionTemplate = _habitCollectionTemplate;
     }
 
     uint256[42] private __gap;

@@ -2,8 +2,8 @@
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-
 import "./HabitCore.sol";
+import "./interface/IHabitCollection.sol";
 
 contract HabitHacker is Initializable, HabitCore {
     function initialize(
@@ -35,7 +35,9 @@ contract HabitHacker is Initializable, HabitCore {
         uint256 _successCondition,
         uint256 _drawCondition,
         uint256 _startTime,
-        uint256 _endTime
+        uint256 _endTime,
+        string memory collectionName,
+        string memory baseURI
     ) public onlyManager {
         habitInfo[habitId] = HabitInfo({
             maxBettingPrice: uint96(_maxPrice),
@@ -47,6 +49,7 @@ contract HabitHacker is Initializable, HabitCore {
             startTime: uint128(_startTime),
             endTime: uint128(_endTime)
         });
+        createCollection(habitId, collectionName, baseURI);
     }
 
     /**
@@ -180,6 +183,9 @@ contract HabitHacker is Initializable, HabitCore {
              * Winner
              * ==============
              */
+            address _winnerCollectionAddress = predictCollectionAddress(
+                habitId
+            );
             for (uint256 i = 0; i < winnerCount; i++) {
                 // Winner takes not only the bet amount but also the loser amount as much as the bet rate
                 payable(winners[i]).transfer(
@@ -187,6 +193,7 @@ contract HabitHacker is Initializable, HabitCore {
                         (lostAmount * bettingAmount[habitId][winners[i]]) /
                         totalAmount
                 );
+                IHabitCollection(_winnerCollectionAddress).mint(winners[i]);
                 spentAmount +=
                     bettingAmount[habitId][winners[i]] +
                     (lostAmount * bettingAmount[habitId][winners[i]]) /

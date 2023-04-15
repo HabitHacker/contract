@@ -13,12 +13,18 @@ describe("simulation", function () {
       moderator1,
       moderator2,
     ] = await ethers.getSigners();
-    const token = await ethers.getContractFactory("HabitHacker");
-    const HabitHacker = await upgrades.deployProxy(token, [
+    const hackerToken = await ethers.getContractFactory("HabitHacker");
+    const HabitHacker = await upgrades.deployProxy(hackerToken, [
       ethers.utils.parseEther("500"),
       2,
     ]);
     await HabitHacker.deployed();
+
+    const collectionToken = await ethers.getContractFactory("HabitCollection");
+    const HabitCollection = await collectionToken.deploy(HabitHacker.address);
+    await HabitCollection.deployed();
+
+    await HabitHacker.updateCollectionTemplate(HabitCollection.address);
 
     return {
       owner,
@@ -102,11 +108,14 @@ describe("simulation", function () {
       habitId,
       ethers.utils.parseEther("100"),
       ethers.utils.parseEther("10"),
+      100,
       50,
       7,
       5,
       currentBlocktimestamp,
-      currentBlocktimestamp + 1000
+      currentBlocktimestamp + 1000,
+      "habitCollection1",
+      "http://localhost:3000/img/habitCollection1"
     );
 
     //participate
