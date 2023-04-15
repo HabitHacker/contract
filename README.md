@@ -12,7 +12,7 @@
 | polygon mumbai | https://mumbai.polygonscan.com/address/0x555639b2B3aB17dB0eF71c41CF4B98607df17Ff4                | https://mumbai.polygonscan.com/address/0x94229E54d15150e024C7bBa731b86d25f8A18345                |
 | polygon zkevm  | https://testnet-zkevm.polygonscan.com/address/0x6aA8Ffd2a312DF1B0b65b3d1d4b614BF1553b9eB         | https://testnet-zkevm.polygonscan.com/address/0x4Bfdfa58a3fF7B09460e4Df49B14ce494Ac0De58         |
 
-- polygon twitter : https://twitter.com/joe_altava/status/1647128633142833152?s=20
+- polygon twitter : https://twitter.com/joe_altava/status/1647220842919788549?s=20
 
 ## contract
 
