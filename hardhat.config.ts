@@ -44,6 +44,11 @@ const config: HardhatUserConfig = {
       accounts: [process.env.WALLET_PIRVATE_KEY || ""],
       chainId: 534353,
     },
+    taiko: {
+      url: "https://l2rpc.hackathon.taiko.xyz",
+      accounts: [process.env.WALLET_PIRVATE_KEY || ""],
+      chainId: 167002,
+    },
   },
   gasReporter: {
     gasPriceApi:
@@ -81,6 +86,14 @@ const config: HardhatUserConfig = {
         urls: {
           apiURL: "https://api-testnet-zkevm.polygonscan.com/api",
           browserURL: "https://testnet-zkevm.polygonscan.com/",
+        },
+      },
+      {
+        network: "taiko",
+        chainId: 167002,
+        urls: {
+          apiURL: "https://l2explorer.hackathon.taiko.xyz/api",
+          browserURL: "https://l2explorer.hackathon.taiko.xyz",
         },
       },
     ],
