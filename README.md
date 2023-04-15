@@ -6,11 +6,11 @@
 
 | network        | explorer url(implement)                                                                          | explorer url(proxy)                                                                              |
 | -------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| alfajores      | https://alfajores.celoscan.io/address/0xbe169307a570E799d098d9884F565bf7E6821c36                 | https://alfajores.celoscan.io/address/0x02Dd2Eb340Bb12164D066fd8a18fe88851B4e778                 |
-| linea          | https://explorer.goerli.linea.build/address/0xbe169307a570E799d098d9884F565bf7E6821c36/contracts | https://explorer.goerli.linea.build/address/0x02Dd2Eb340Bb12164D066fd8a18fe88851B4e778/contracts |
+| alfajores      | https://alfajores.celoscan.io/address/0x555639b2B3aB17dB0eF71c41CF4B98607df17Ff4#code            | https://alfajores.celoscan.io/address/0x94229E54d15150e024C7bBa731b86d25f8A18345                 |
+| linea          | https://explorer.goerli.linea.build/address/0x555639b2B3aB17dB0eF71c41CF4B98607df17Ff4/contracts | https://explorer.goerli.linea.build/address/0x94229E54d15150e024C7bBa731b86d25f8A18345/contracts |
 | scroll         | https://blockscout.scroll.io/address/0xbe169307a570E799d098d9884F565bf7E6821c36                  | https://blockscout.scroll.io/address/0x02Dd2Eb340Bb12164D066fd8a18fe88851B4e778                  |
-| polygon mumbai | https://mumbai.polygonscan.com/address/0xbe169307a570E799d098d9884F565bf7E6821c36                | https://mumbai.polygonscan.com/address/0x02Dd2Eb340Bb12164D066fd8a18fe88851B4e778                |
-| polygon zkevm  | https://testnet-zkevm.polygonscan.com/address/0x6e0d44023cD8f50fb04500Ea5b98B932fE332F66         | https://testnet-zkevm.polygonscan.com/address/0xc4D040B5Dee8B034429A767A10059b7a529E9F74         |
+| polygon mumbai | https://mumbai.polygonscan.com/address/0x555639b2B3aB17dB0eF71c41CF4B98607df17Ff4                | https://mumbai.polygonscan.com/address/0x94229E54d15150e024C7bBa731b86d25f8A18345                |
+| polygon zkevm  | https://testnet-zkevm.polygonscan.com/address/0x6aA8Ffd2a312DF1B0b65b3d1d4b614BF1553b9eB         | https://testnet-zkevm.polygonscan.com/address/0x4Bfdfa58a3fF7B09460e4Df49B14ce494Ac0De58         |
 
 - polygon twitter : https://twitter.com/joe_altava/status/1647128633142833152?s=20
 
