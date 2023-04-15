@@ -12,8 +12,6 @@
 | polygon mumbai | https://mumbai.polygonscan.com/address/0xbe169307a570E799d098d9884F565bf7E6821c36                | https://mumbai.polygonscan.com/address/0x02Dd2Eb340Bb12164D066fd8a18fe88851B4e778                |
 | polygon zkevm  | https://testnet-zkevm.polygonscan.com/address/0x6e0d44023cD8f50fb04500Ea5b98B932fE332F66         | https://testnet-zkevm.polygonscan.com/address/0xc4D040B5Dee8B034429A767A10059b7a529E9F74         |
 
----
-
 - polygon twitter : https://twitter.com/joe_altava/status/1647128633142833152?s=20
 
 ## contract
@@ -41,8 +39,6 @@
 Structed data can move off-chain data to on-chain data more or less accurately through nodes such as Oracle and chainlink
 It is not easy to validate unstructured data such as exercise and writing to the on-chain.
 So we decided to solve this problem by using people's node, similar to nodes in a blockchain network, and we decided to call that person's node a modulator.
-
----
 
 ## Roadmap
 
