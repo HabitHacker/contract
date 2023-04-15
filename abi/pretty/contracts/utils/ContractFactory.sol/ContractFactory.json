@@ -1,0 +1,4 @@
+[
+  "function contractFactory() view returns (address)",
+  "function getContractFactory() view returns (address)"
+]

@@ -1,0 +1,28 @@
+[
+  {
+    "inputs": [],
+    "name": "contractFactory",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "getContractFactory",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "_contractFactory",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
