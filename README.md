@@ -4,14 +4,13 @@
 
 ## deployed Address
 
-<img width="497" alt="스크린샷 2023-04-15 19 20 34" src="https://user-images.githubusercontent.com/97350083/232208107-9b245f7c-d2d2-4925-a1cc-e989e8eeef68.png">
-| network | explorer url(implement) | explorer url(proxy) |
+| network        | explorer url(implement)                                                                          | explorer url(proxy)                                                                              |
 | -------------- | ------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
-| alfajores | https://alfajores.celoscan.io/address/0xbe169307a570E799d098d9884F565bf7E6821c36 | https://alfajores.celoscan.io/address/0x02Dd2Eb340Bb12164D066fd8a18fe88851B4e778 |
-| linea | https://explorer.goerli.linea.build/address/0xbe169307a570E799d098d9884F565bf7E6821c36/contracts | https://explorer.goerli.linea.build/address/0x02Dd2Eb340Bb12164D066fd8a18fe88851B4e778/contracts |
-| scroll | https://blockscout.scroll.io/address/0xbe169307a570E799d098d9884F565bf7E6821c36 | https://blockscout.scroll.io/address/0x02Dd2Eb340Bb12164D066fd8a18fe88851B4e778 |
-| polygon mumbai | https://mumbai.polygonscan.com/address/0xbe169307a570E799d098d9884F565bf7E6821c36 | https://mumbai.polygonscan.com/address/0x02Dd2Eb340Bb12164D066fd8a18fe88851B4e778 |
-| polygon zkevm | https://testnet-zkevm.polygonscan.com/address/0x6e0d44023cD8f50fb04500Ea5b98B932fE332F66 | https://testnet-zkevm.polygonscan.com/address/0xc4D040B5Dee8B034429A767A10059b7a529E9F74 |
+| alfajores      | https://alfajores.celoscan.io/address/0xbe169307a570E799d098d9884F565bf7E6821c36                 | https://alfajores.celoscan.io/address/0x02Dd2Eb340Bb12164D066fd8a18fe88851B4e778                 |
+| linea          | https://explorer.goerli.linea.build/address/0xbe169307a570E799d098d9884F565bf7E6821c36/contracts | https://explorer.goerli.linea.build/address/0x02Dd2Eb340Bb12164D066fd8a18fe88851B4e778/contracts |
+| scroll         | https://blockscout.scroll.io/address/0xbe169307a570E799d098d9884F565bf7E6821c36                  | https://blockscout.scroll.io/address/0x02Dd2Eb340Bb12164D066fd8a18fe88851B4e778                  |
+| polygon mumbai | https://mumbai.polygonscan.com/address/0xbe169307a570E799d098d9884F565bf7E6821c36                | https://mumbai.polygonscan.com/address/0x02Dd2Eb340Bb12164D066fd8a18fe88851B4e778                |
+| polygon zkevm  | https://testnet-zkevm.polygonscan.com/address/0x6e0d44023cD8f50fb04500Ea5b98B932fE332F66         | https://testnet-zkevm.polygonscan.com/address/0xc4D040B5Dee8B034429A767A10059b7a529E9F74         |
 
 ---
 
@@ -19,6 +18,7 @@
 
 ## contract
 
+<img width="497" alt="스크린샷 2023-04-15 19 20 34" src="https://user-images.githubusercontent.com/97350083/232208107-9b245f7c-d2d2-4925-a1cc-e989e8eeef68.png">
 - HabitHacker
   : Final deployed contract that contain important actions such as participation, verification, and settlement and multiple get functions
 - HabitCore
