@@ -2,7 +2,7 @@
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts/proxy/Clones.sol";
-import "./interface/IHabitCollection.sol";
+import "../interface/IHabitCollection.sol";
 
 contract HabitCollectionFactory {
     using Clones for address;

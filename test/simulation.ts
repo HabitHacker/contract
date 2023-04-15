@@ -104,16 +104,18 @@ describe("simulation", function () {
       await ethers.provider.getBlock(await ethers.provider.getBlockNumber())
     ).timestamp;
 
-    await HabitHacker.connect(owner).habitSetting(
+    await HabitHacker.connect(relayer).habitSetting(
       habitId,
-      ethers.utils.parseEther("100"),
-      ethers.utils.parseEther("10"),
-      100,
-      50,
-      7,
-      5,
-      currentBlocktimestamp,
-      currentBlocktimestamp + 1000,
+      [
+        ethers.utils.parseEther("100"),
+        ethers.utils.parseEther("10"),
+        100,
+        50,
+        7,
+        5,
+        currentBlocktimestamp,
+        currentBlocktimestamp + 1000,
+      ],
       "habitCollection1",
       "http://localhost:3000/img/habitCollection1"
     );

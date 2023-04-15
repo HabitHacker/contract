@@ -2,7 +2,7 @@
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
-import "./HabitCore.sol";
+import "./libs/HabitCore.sol";
 import "./interface/IHabitCollection.sol";
 
 contract HabitHacker is Initializable, HabitCore {
@@ -18,37 +18,17 @@ contract HabitHacker is Initializable, HabitCore {
     /**
      * @notice Set the habit information
      * @param habitId Identifier to identify habit
-     * @param _maxPrice Maximum amount that can be bet on habit
-     * @param _minPrice Minimum amount that can be bet on habit
-     * @param _failersRetrieveRatio The loser will be given back (failersRetrieveRatio/100)% of the bet amount to the betters.
-     * @param _successCondition Number of executes to succeed
-     * @param _drawCondition Number of executes to draw
-     * @param _startTime start time
-     * @param _endTime end time
+     * @param _habitInfo Habit information
+     * @param collectionName Name of the collection
+     * @param baseURI Base URI of the collection
      */
     function habitSetting(
         uint256 habitId,
-        uint256 _maxPrice,
-        uint256 _minPrice,
-        uint256 _maxParticipants,
-        uint256 _failersRetrieveRatio,
-        uint256 _successCondition,
-        uint256 _drawCondition,
-        uint256 _startTime,
-        uint256 _endTime,
+        HabitInfo memory _habitInfo,
         string memory collectionName,
         string memory baseURI
-    ) public onlyManager {
-        habitInfo[habitId] = HabitInfo({
-            maxBettingPrice: uint96(_maxPrice),
-            minBettingPrice: uint96(_minPrice),
-            maxParticipants: uint24(_maxParticipants),
-            failersRetrieveRatio: uint8(_failersRetrieveRatio),
-            successCondition: uint16(_successCondition),
-            drawCondition: uint16(_drawCondition),
-            startTime: uint128(_startTime),
-            endTime: uint128(_endTime)
-        });
+    ) public onlyRelayer {
+        habitInfo[habitId] = _habitInfo;
         createCollection(habitId, collectionName, baseURI);
     }
 
@@ -127,7 +107,7 @@ contract HabitHacker is Initializable, HabitCore {
      * @notice The moderator is paid as many times as he has verified
      * @param habitId Identifier to identify habit
      */
-    function settleWinner(uint256 habitId) public payable onlyManager {
+    function settleWinner(uint256 habitId) public payable {
         require(
             habitInfo[habitId].endTime < block.timestamp,
             "habit is not over"

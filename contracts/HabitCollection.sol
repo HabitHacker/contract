@@ -2,7 +2,7 @@
 pragma solidity ^0.8.9;
 
 import "@openzeppelin/contracts-upgradeable/token/ERC721/ERC721Upgradeable.sol";
-import "./util/ContractFactory.sol";
+import "./utils/ContractFactory.sol";
 
 contract HabitCollection is ERC721Upgradeable, ContractFactory {
     uint256 public challengeId;
